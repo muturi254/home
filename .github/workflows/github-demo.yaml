@@ -1,6 +1,10 @@
 name: Github action Demo
 on:
-  [push]
+  # [push]
+  workflow_call:
+    secrets:
+      NAME:
+        required: true
 
 jobs:
   Explore-github-Actions:

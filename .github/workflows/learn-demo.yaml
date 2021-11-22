@@ -2,6 +2,8 @@ name: Learn-github-action
 on: [push]
 
 jobs:
+  hello-world:
+    uses: muturi254/home/.github/workflows/github-demo.yaml@main
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
@@ -11,7 +13,7 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
-      - run: echo "hello my name is $NAME"
+      - run: echo "hello my name is ${{ env.NAME }}"
         
         env:
           NAME: ${{ secrets.NAME }}
