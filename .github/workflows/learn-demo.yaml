@@ -15,4 +15,3 @@ jobs:
         env:
           NAME: 'john Doe'
           AGE: 10
-          GENDER: 'female'
