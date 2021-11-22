@@ -11,9 +11,8 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
-      - run: echo "hello my name is ${{env.NAME}}"
-        secrets:
-          NAME: ${{ secrets.NAME }}
+      - run: echo "hello my name is ${{env:NAME}}"
+        
         env:
           NAME: ${{ secrets.Name }}
           AGE: 10
