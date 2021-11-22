@@ -4,6 +4,8 @@ on: [push]
 jobs:
   hello-world:
     uses: muturi254/home/.github/workflows/github-demo.yaml@main
+    secrets:
+      NAME: ${{ secrets.NAME }}
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
